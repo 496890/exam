@@ -1,0 +1,69 @@
+{
+	"title": "竞赛综合事务领域志愿者测试",
+	"config": {
+		"type": {
+			"single": {"point": 3, "name": "单项选择题"},
+			"multi"	: {"point": 3, "name": "多项选择题"},
+			"bool"	: {"point": 5, "name": "判断题"}
+		},
+		"appid": {
+			"web"		: "wxe08febe4ba7ba3d8",
+			"subscribe"	: "wxcdc2b1f7a2342a1e"
+		},
+		"setup": {
+			"SESSION"	: "exam.user",
+			"Review"	: false,
+			"Tops"		: 50,
+			"host"		: "https://node.sx.net.cn/exam",
+			"qrcode"	: "https://app.sx.net.cn/zjzy/images/style_wxlogin.css?"
+		},
+		"text": {
+			"OVER"		: "抱歉，本次活动已经结束！敬请关注我们后续更多的活动。",
+			"PENDING"	: "抱歉，活动尚未开始，请耐心等待，欢迎后续关注！",
+			"TopTitle"	: "Top排行榜",
+			"Deny"		: "该选项卡仅对参与者开放，请先完成答题",
+			"Done"		: "答题已完成，感谢您的参与",
+			"Register"	: "注册登记",
+			"Name"		: "姓名/昵称",
+			"Name_Desc"	: "",
+			"Phone"		: "手机",
+			"Phone_Desc"	: "身份凭证",
+			"Menu"		: ["参与竞赛", "我的成绩", "排行榜"]
+		},
+		"start": "2023/8/29 9:00",
+		"end": "2023/10/5 18:00"
+	},
+	"intro": "随着杭州亚运会的脚步越来越近，这桩即将在家门口举办的“亚洲大事”，让每一位绍兴人心潮澎湃。绍兴作为本次亚运会承办比赛最多的协办城市，这座文化底蕴深厚的千年古城，各处都洋溢着亚运氛围。答题内容包括单选题、多选题、判断题。在规定时间内答题完成（又快又对），即有机会获得奖品！快叫上你身边的小伙伴，一起来答题吧！",
+	"list": [
+		{"type": "single",	"answer": null, "key": "b",		"question": "竞赛综合事务的英语缩写是？", "option": ["SPT","SPM","SNY"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "绍兴奥体中心承办的亚运比赛是以下哪一项？", "option": ["篮球女子小组赛","篮球男子小组赛","蓝球女子决赛"]},
+		{"type": "single",	"answer": null, "key": "c",		"question": "下列不属于竞赛综合事务领域志愿者岗位的是？", "option": ["分区管理志愿者","运动队坐席管理志愿者","陪护员"]},
+		{"type": "single",	"answer": null, "key": "c",		"question": "杭州2022年第19届亚运会女子篮球项目的上场运动员共多少人？", "option": ["3","6","5"]},
+		{"type": "single",	"answer": null, "key": "b",		"question": "本届亚运会女篮参赛队伍共有几支？", "option": ["10","12","16"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "在9月27日绍兴奥体中心体育馆的赛事中，运动员到达场馆的时间为（　）。", "option": ["第一场12:30；第二场：16:15；第三场：18:45","第一场12:30；第二场：16:30；第三场：18:30","第一场12:30；第二场：16:15；第三场：18:30","第一场12:30；第二场：16:30；第三场：18:45"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "理论上，中场休息时间为（　）分钟，需要提前（　）分钟提醒。", "option": ["15；5","10；5","15；3","10；3"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "以下的规范表述中，不正确的是（　）", "option": ["2022杭州亚运会","杭州2022年亚运会","杭州亚运会","杭州2022年第19届亚运会"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "运动队服务主管的工作职责不包含（　）", "option": ["负责运动队在亚运村的保障工作","协调运动队的交通服务","负责队伍赛时联络","负责运动队更衣室和休息室的开放和维护，餐饮服务"]},
+		{"type": "single",	"answer": null, "key": "c",		"question": "在绍兴奥体中心体育馆的赛事中场休息结束后，再次入场顺序（　）", "option": ["运动员-NTO-ITO","NTO-ITO-远动员","NTO-运动员-ITO"]},
+		{"type": "multi",	"answer": null, "key": "abc",		"question": "行为规范需做到哪“三会”（　）。", "option": ["会站","会笑","会说","会动"]},
+		{"type": "multi",	"answer": null, "key": "abcd",		"question": "绍兴奥体中心体育馆女子篮球，赛程日期（　）。", "option": ["2023年9月27日","2023年9月29日","2023年10月1日","2023年10月2日"]},
+		{"type": "multi",	"answer": null, "key": "abcd",		"question": "技术官员服务职责（　）。", "option": ["负责接待技术官员服务工作","负责技术官员的功能房布置、清洁","负责技术官员的引导","完成领导交办的其他工作"]},
+		{"type": "multi",	"answer": null, "key": "abcd",		"question": "技术官员应急预案，技术官员在功能房受伤或生病（　）。", "option": ["及时了解报技术官员伤情","安抚技术官员情绪","等待医疗卫生","第一时间上报技术官员服务主管"]},
+		{"type": "multi",	"answer": null, "key": "acd",		"question": "技术官员服务仪容仪表（　）。", "option": ["穿志愿者服装","女士浓妆、男士不留胡须","女士不留披肩发、男发不过耳","指甲修建整齐"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "竞赛团队共有四个领域组成，分别是竞赛综合事务、（　）、体育展示和（　）。", "option": ["竞赛技术运行；反兴奋剂","观众服务；场馆运行","设施运维；医疗卫生"]},
+		{"type": "single",	"answer": null, "key": "b",		"question": "绍兴奥体中心体育馆共有（　）个比赛日可观赛。", "option": ["3","4","6","5"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "绍兴奥体中心体育馆赛事将于（　）年（　）月（　）日（　）点（　）分正式开赛。", "option": ["2023年9月27日13点30分","2023年9月29日13点30分","2023年9月27日16点30分"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "杭州亚运会的口号是（　）", "option": ["心心相融，@未来","心相约，梦闪耀","点燃亚洲激情，实现你我梦想"]},
+		{"type": "single",	"answer": null, "key": "b",		"question": "赛时每日竞赛活动详细进程表的英文缩写是（　）。", "option": ["DRS","DCAS","BRS"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "绍兴奥体中心体育馆一共承办（　）场比赛。", "option": ["11","13","14"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "国际技术官员英文缩写ITO；国内技术官员英文缩写（　）。", "option": ["NTO","TD","AF"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "技术官员前往FOP区，志愿者需提前（　）分钟提醒技术官员做好准备。", "option": ["5","3","10"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "赛时，场馆内工作人员、技术官员等非观众群体需要医疗就是去哪个医疗站点？", "option": ["医务室","FOP医疗点","急救车点"]},
+		{"type": "single",	"answer": null, "key": "a",		"question": "绍兴奥体中心体育馆医学观察室设置在场馆几号门。", "option": ["1","3","5"]},
+		{"type": "bool",	"answer": null, "key": "b",		"question": "持有蓝区证件的人员，不可以进入红区。"},
+		{"type": "bool",	"answer": null, "key": "a",		"question": "从绍兴奥体中心体育馆运动员从下车点出发，进入大厅后，右侧为客队，左侧为主队。"},
+		{"type": "bool",	"answer": null, "key": "a",		"question": "运动员坐席管理志愿者引领观赛运动员走客队运动员通道。"},
+		{"type": "bool",	"answer": null, "key": "b",		"question": "ITO和NTO可以同时进入FOP区。"},
+		{"type": "bool",	"answer": null, "key": "a",		"question": "技术官员离开场馆时，需提醒携带随身物品。"}
+	]
+}
