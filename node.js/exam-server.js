@@ -149,7 +149,7 @@ Node.init	= (Q, S)=>{
 ESD.WX				= {};
 
 ESD.WX.Uin			= (N)=>{			//使用简称获得公众号相关配置数据
-	N	= N || process.env.webapp;
+	N	= N || process.env.exam_subscribe;
 	return {appid:UIN[N].appid, secret:UIN[N].secret, name:N};
 };
 ESD.WX.oauth2		= (code, uin)=>{
