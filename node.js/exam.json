@@ -1,6 +1,7 @@
 {
 	"exam_client"		: "https://example.com/exam/",
 	"exam_root"		: "d:/nginx/exam",
+	"webapp"		: "test",
 	"redis_password"	: "888888",
 	"redis_port"		: "1234"
 }
