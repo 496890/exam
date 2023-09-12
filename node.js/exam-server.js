@@ -153,7 +153,7 @@ ESD.WX.Uin			= (N)=>{			//使用简称获得公众号相关配置数据
 };
 ESD.WX.oauth2		= (code, uin)=>{
 	return new Promise( (res, rej)=>{
-		uin		= ESD.WX.Uin();
+		uin		= ESD.WX.Uin(uin);
 		fetch(`https://api.weixin.qq.com/sns/oauth2/access_token?appid=${uin.appid}&secret=${uin.secret}&code=${code}&grant_type=authorization_code`).then( r=>r.json() ).then( r=>{
 			res(r||{});					//该接口只能获取[access_token, openid, unionid]，不包含其它用户信息，客户端发起授权时，[scope=snsapi_userinfo||snsapi_login]可以同时获取[unionid]
 		});
