@@ -23,7 +23,7 @@
 class Auth extends AuthBase
 {
 	constructor(auth={}){
-		const	appid		= auth.appid,
+		const	appid		= auth.appids,
 				redirect	= {
 					web			: `https://open.weixin.qq.com/connect/qrconnect?appid=${appid.web}&redirect_uri={url}&response_type=code&scope=snsapi_login&state={state}#wechat_redirect`,
 					subscribe	: `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid.subscribe}&redirect_uri={url}&response_type=code&scope=snsapi_userinfo&state={state}#wechat_redirect`
@@ -456,7 +456,7 @@ const	vue		= new Vue({el: '.weui-exam', template: `
 					this.user	= u;
 					break;
 				default :
-					new Auth({host: Config.host, href: Config.qrcode, appid: appid, redirect: 'exam'});
+					new Auth({host: Config.host, href: Config.qrcode, webapp: Config.webapp, appids: appid, redirect: 'exam'});
 					break;
 				}
 				console.log('check user', u);
