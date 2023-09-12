@@ -14,6 +14,7 @@
 			"SESSION"	: "exam.user",
 			"Review"	: false,
 			"Tops"		: 50,
+			"webapp"	: "test2",
 			"host"		: "https://node.***.cn/exam",
 			"qrcode"	: "https://app.***.cn/images/style_wxlogin.css?"
 		},
