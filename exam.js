@@ -1,6 +1,6 @@
 /*!
 	易时代 问卷答题系统客户端程序
-	最后修订： 2023/9/10
+	最后修订： 2023/9/13
 
 	基于微信的网页授权（公众号需要具备网页授权能力）
 	1.微信端用户确认授权
@@ -431,19 +431,18 @@ const	vue		= new Vue({el: '.weui-exam', template: `
 		let {start, end, appid}	= r.config,
 			c_date	= (date)=>{
 				return `${ESD.GetDate(6, date)} ${ESD.GetDate(3, date).split(':').slice(0,2).join(':')}`;
-			};
+			},
+			c_conf	= null;
 
-		if (ESD.GetDate(0, end) < ESD.GetDate(0))
+		if (ESD.GetDate(0, end	) < ESD.GetDate(0)){c_conf	= {content: TXT.OVER,		title: c_date(end),		text: '结束'};}
+		if (ESD.GetDate(0, start) > ESD.GetDate(0)){c_conf	= {content: TXT.PENDING,	title: c_date(start),	text: '开始'};}
+
+		if (c_conf)
 		{
-			weui.dialog({title: r.title, className: 'weui-dialog__warning', content: `${TXT.OVER}		<i class="date" title="${c_date(end)}"	>结束时间：</i>`, buttons: []});
+			weui.dialog({title: r.title, className: 'weui-dialog__warning', content: `${c_conf.content}	<i class="date" title="${c_conf.title}">${c_conf.text}时间：</i>`, buttons: []});
+			weui.loading().hide();
 		}
-
-		if (ESD.GetDate(0, start) > ESD.GetDate(0))
-		{
-			weui.dialog({title: r.title, className: 'weui-dialog__warning', content: `${TXT.PENDING}	<i class="date" title="${c_date(start)}">开始时间：</i>`, buttons: []});
-		}
-
-		if (Config.host)
+		else if (Config.host)
 		{
 			new Unionid(Config.host).check().then(u=>{
 				weui.loading().hide();
