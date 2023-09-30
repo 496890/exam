@@ -1,6 +1,6 @@
 /*!
 	易时代 问卷答题系统客户端程序
-	最后修订： 2023/9/13
+	最后修订： 2023/9/30
 
 	基于微信的网页授权（公众号需要具备网页授权能力）
 	1.微信端用户确认授权
@@ -54,7 +54,12 @@ class Unionid
 		return new Promise( res=>{
 			if (this.unionid)
 			{
-				fetch(`${this.host}/?type=user`, {method:'post', body:JSON.stringify({key: Config.DB, field: this.unionid})}).then(r=>r.json()).then(r=>{
+				fetch(`${this.host}/?type=user`, {
+					method: 'post',
+					headers: {'Authorization': this.unionid},
+					body: JSON.stringify({key: Config.DB, field: this.unionid})
+				}).then(r=>r.json()).then(r=>{
+					console.log(r);
 					r	= ESD.isJSON(r.data[0]);
 					if ( r.status )
 					{
@@ -96,7 +101,7 @@ Vue.component('c-ranks',{
 	template : `
 			<div class="weui-form">
 				<div class="weui-form__text-area">
-					<h2 class="weui-form__title large">{{TXT.TopTitle}}</h2>
+					<h2 class="weui-form__title large">{{TXT.TopTitle.replace(/{@count}/, Config.Tops)}}</h2>
 					<h2 class="weui-form__desc">{{title}}</h2>
 				</div>
 				<ul class="weui-ranking">
@@ -321,7 +326,11 @@ Vue.component('c-exams',{
 					// console.log('Answer Sheet', this.user);
 					if (Config.host)
 					{
-						fetch(`${Config.host}/?type=save`, {method: 'post', body: JSON.stringify(this.user)}).then(r=>r.json()).then(r=>{
+						fetch(`${Config.host}/?type=save`, {
+							method: 'post',
+							headers: {'Authorization': this.user.unionid},
+							body: JSON.stringify(this.user)
+						}).then(r=>r.json()).then(r=>{
 							weui.loading().hide();
 							if (r.error)
 							{
